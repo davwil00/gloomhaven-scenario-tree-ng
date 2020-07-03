@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, withLatestFrom } from 'rxjs/operators';
 import * as cloneDeep from 'lodash.clonedeep';
 @Injectable()
 export class AssetService {
   private defaultScenariosJSON: any;
   constructor(private http: HttpClient) { }
   public getScenariosJSON(): Observable<any> {
-    const encodedTree = localStorage.getItem('gloomhavenScenarioTree');
-    return this.http.get<any>('./assets/scenarios.json').pipe(
-      map(scenarios => {
+    const gistUrl = 'https://gist.githubusercontent.com/davwil00/3e9fed86ff2d62e3f3a7055acddc2bd1/raw/de023b9f5103ec2657709a26a5063b881ce38107/gloomhaven.json';
+    return this.http.get<string>(gistUrl).pipe(
+      withLatestFrom(this.http.get<any>('./assets/scenarios.json')),
+      map(([encodedTree, scenarios]) => {
         // First sort the nodes so that any ui using them keeps order consistent
         scenarios.nodes = scenarios.nodes.sort((n1, n2) => +n1.data.id - +n2.data.id);
         this.defaultScenariosJSON = cloneDeep(scenarios);
@@ -21,8 +22,7 @@ export class AssetService {
       })
     );
   }
-  public getDecodedScenarios(currentNodes, savedScenarioString) {
-    const savedScenarios = JSON.parse(savedScenarioString);
+  public getDecodedScenarios(currentNodes, savedScenarios) {
     currentNodes.forEach((node, index) => {
       const savedNode = savedScenarios.nodes.find(saved => saved.id === node.data.id);
       if (typeof savedNode !== 'undefined')
@@ -90,10 +90,10 @@ export class AssetService {
     });
     /* Save only nodes with changed attributes */
     const changedNodes = simplifiedNodes.filter(obj => Object.keys(obj).length > 1);
-    return JSON.stringify({nodes: changedNodes, version: '2'});
+    return {nodes: changedNodes, version: '2'};
   }
   public setScenariosJSON(scenarios) {
-    localStorage.setItem('gloomhavenScenarioTree', this.getEncodedScenarios(scenarios));
+    localStorage.setItem('gloomhavenScenarioTree', JSON.stringify(this.getEncodedScenarios(scenarios)));
   }
   public getImageUrl(activePage) {
     return `assets/scenarios/${activePage}.jpg`;

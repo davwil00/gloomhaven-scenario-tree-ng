@@ -11,6 +11,9 @@ NodeJS must be installed and in your PATH (https://nodejs.org/en/)
 
 Run `npm install`
 
+## Secrets
+Set the `gistId` and `githubToken` values in `environment.ts`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

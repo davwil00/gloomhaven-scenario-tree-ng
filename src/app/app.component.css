@@ -2,9 +2,10 @@ app-scenario-info {
   width: 35%;
   height: 100vh;
   overflow-y: auto;
+  max-width: 345px;
 }
 app-tree {
-  width: 65%;
+  width: 100%;
   height: 100vh;
   border-left: 1px solid #ccc;
 }

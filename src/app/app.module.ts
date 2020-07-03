@@ -4,7 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ExportTreeComponent, ImportExportDialogComponent } from './export-tree/export-tree.component';
+import { ExportTreeComponent } from './export-tree/export-tree.component';
+import { ImportExportDialogComponent } from './export-tree/import-export-dialog.component';
 import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { TreeComponent } from './tree/tree.component';
