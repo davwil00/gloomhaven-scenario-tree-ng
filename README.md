@@ -12,7 +12,7 @@ NodeJS must be installed and in your PATH (https://nodejs.org/en/)
 Run `npm install`
 
 ## Secrets
-Set the `gistId` and `githubToken` values in `environment.ts`
+Set the `gistId` and `githubToken` values in `environment.ts` and `environment.prod.ts`
 
 ## Development server
 

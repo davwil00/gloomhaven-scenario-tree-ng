@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, withLatestFrom } from 'rxjs/operators';
 import * as cloneDeep from 'lodash.clonedeep';
+import { environment } from '../environments/environment';
 @Injectable()
 export class AssetService {
   private defaultScenariosJSON: any;
   constructor(private http: HttpClient) { }
   public getScenariosJSON(): Observable<any> {
-    const gistUrl = 'https://gist.githubusercontent.com/davwil00/3e9fed86ff2d62e3f3a7055acddc2bd1/raw/de023b9f5103ec2657709a26a5063b881ce38107/gloomhaven.json';
+    const gistUrl = `https://gist.githubusercontent.com/davwil00/${environment.gistId}/raw/gloomhaven.json`;
     return this.http.get<string>(gistUrl).pipe(
       withLatestFrom(this.http.get<any>('./assets/scenarios.json')),
       map(([encodedTree, scenarios]) => {
