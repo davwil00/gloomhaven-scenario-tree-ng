@@ -3,7 +3,7 @@ import { FormControl, Validators, ValidatorFn, AbstractControl } from '@angular/
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AssetService } from '../asset.service';
 import { request } from '@octokit/request';
-import jsonFormat from 'json-format'
+import jsonFormat from 'json-format';
 import { environment } from './../../environments/environment';
 
 @Component({
@@ -33,7 +33,7 @@ export class ImportExportDialogComponent {
         this.formattedChangedScenarios = jsonFormat(this.assetService.getEncodedScenarios(this.scenarios));
         this.encodedScenarios.setValue(this.formattedChangedScenarios);
     }
-    
+
     public importScenarios(): void {
         this.importError = null;
         try {
@@ -64,14 +64,14 @@ export class ImportExportDialogComponent {
                 alert('Saved');
             } else {
                 console.error(response.status);
-                console.error(response.data)
+                console.error(response.data);
             }
         }).catch(err => console.error(err));
     }
 
     private validJSONValidator(): ValidatorFn {
-    return (control: AbstractControl): { [key: string]: any } => {
-        return this.importError != null ? { 'validJSON': { value: this.importError } } : null;
-    };
-}
+        return (control: AbstractControl): { [key: string]: any } => {
+            return this.importError != null ? { 'validJSON': { value: this.importError } } : null;
+        };
+    }
 }

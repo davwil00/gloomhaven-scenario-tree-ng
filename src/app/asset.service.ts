@@ -26,8 +26,7 @@ export class AssetService {
   public getDecodedScenarios(currentNodes, savedScenarios) {
     currentNodes.forEach((node, index) => {
       const savedNode = savedScenarios.nodes.find(saved => saved.id === node.data.id);
-      if (typeof savedNode !== 'undefined')
-      {
+      if (typeof savedNode !== 'undefined') {
         const matchedBase = this.defaultScenariosJSON.nodes.find(base => base.data.id === node.data.id);
         /* Logic to allow old saved json format to work */
         if (typeof savedScenarios.version === 'undefined') {
