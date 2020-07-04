@@ -959,7 +959,7 @@
       },
       "position": {
         "x": -1000,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -978,7 +978,7 @@
       },
       "position": {
         "x": -1000,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -997,7 +997,7 @@
       },
       "position": {
         "x": -1000,
-        "y": 1550
+                "y": 1550
       }
     },
     {
@@ -1011,7 +1011,7 @@
       },
       "position": {
         "x": -800,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1030,7 +1030,7 @@
       },
       "position": {
         "x": -800,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -1053,7 +1053,7 @@
       },
       "position": {
         "x": -600,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1067,7 +1067,7 @@
       },
       "position": {
         "x": -600,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -1081,7 +1081,7 @@
       },
       "position": {
         "x": -400,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1095,7 +1095,7 @@
       },
       "position": {
         "x": -400,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -1109,7 +1109,7 @@
       },
       "position": {
         "x": -200,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1128,7 +1128,7 @@
       },
       "position": {
         "x": -200,
-        "y": 1450
+                "y": 1450
       }
     },
 
@@ -1148,7 +1148,7 @@
       },
       "position": {
         "x": 0,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1167,7 +1167,7 @@
       },
       "position": {
         "x": 0,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -1181,7 +1181,7 @@
       },
       "position": {
         "x": 220,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1204,7 +1204,7 @@
       },
       "position": {
         "x": 220,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -1223,7 +1223,7 @@
       },
       "position": {
         "x": 425,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1242,7 +1242,7 @@
       },
       "position": {
         "x": 425,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -1256,7 +1256,7 @@
       },
       "position": {
         "x": 650,
-        "y": 1350
+                "y": 1350
       }
     },
     {
@@ -1275,7 +1275,7 @@
       },
       "position": {
         "x": 650,
-        "y": 1450
+                "y": 1450
       }
     },
     {
@@ -1289,7 +1289,7 @@
       },
       "position": {
         "x": 900,
-        "y": 1350
+                "y": 1350
       }
     },
 
@@ -1304,7 +1304,7 @@
       },
       "position": {
         "x": -1000,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1318,7 +1318,7 @@
       },
       "position": {
         "x": -1000,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1337,7 +1337,7 @@
       },
       "position": {
         "x": -800,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1351,7 +1351,7 @@
       },
       "position": {
         "x": -800,
-        "y": 1800
+                "y": 1800
       }
     },
 
@@ -1371,7 +1371,7 @@
       },
       "position": {
         "x": -600,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1390,7 +1390,7 @@
       },
       "position": {
         "x": -600,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1404,7 +1404,7 @@
       },
       "position": {
         "x": -400,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1423,7 +1423,7 @@
       },
       "position": {
         "x": -400,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1442,7 +1442,7 @@
       },
       "position": {
         "x": -200,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1456,7 +1456,7 @@
       },
       "position": {
         "x": -200,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1475,7 +1475,7 @@
       },
       "position": {
         "x": 25,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1489,7 +1489,7 @@
       },
       "position": {
         "x": 225,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1508,7 +1508,7 @@
       },
       "position": {
         "x": 225,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1531,7 +1531,7 @@
       },
       "position": {
         "x": 25,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1558,7 +1558,7 @@
       },
       "position": {
         "x": 425,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1572,7 +1572,7 @@
       },
       "position": {
         "x": 425,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1586,7 +1586,7 @@
       },
       "position": {
         "x": 625,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1605,7 +1605,7 @@
       },
       "position": {
         "x": 625,
-        "y": 1800
+                "y": 1800
       }
     },
     {
@@ -1619,7 +1619,7 @@
       },
       "position": {
         "x": 825,
-        "y": 1700
+                "y": 1700
       }
     },
     {
@@ -1633,7 +1633,7 @@
       },
       "position": {
         "x": 825,
-        "y": 1800
+                "y": 1800
       }
     },
 
@@ -1648,7 +1648,7 @@
       },
       "position": {
         "x": -1000,
-        "y": 1950
+                "y": 1950
       }
     },
     {
@@ -1667,7 +1667,7 @@
       },
       "position": {
         "x": -800,
-        "y": 1950
+                "y": 1950
       }
     },
     {
@@ -1681,7 +1681,7 @@
       },
       "position": {
         "x": -600,
-        "y": 1950
+                "y": 1950
       }
     },
     {
@@ -1700,7 +1700,377 @@
       },
       "position": {
         "x": -400,
-        "y": 1950
+                "y": 1950
+            }
+        },
+        {
+            "data": {
+                "id": "96",
+                "name": "#96 Unexpected Visitors",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "91": {
+                        "looted": "false",
+                        "description": "Gain 30 gold and Party Achievement: \"Opportunists\" Add City Event 84 to the deck"
+                    }
+                }
+            },
+            "position": {
+                "x": 175,
+                "y": 1244
+            }
+        },
+        {
+            "data": {
+                "id": "97",
+                "name": "#97 Lore Untold",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {}
+            },
+            "position": {
+                "x": 175,
+                "y": 1324
+            }
+        },
+        {
+            "data": {
+                "id": "98",
+                "name": "#98 Past in Flames",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "79": {
+                        "looted": "false",
+                        "description": "Gain \"Falcon Figurine\" (Item 157)"
+                    }
+                }
+            },
+            "position": {
+                "x": -535,
+                "y": 1404
+            }
+        },
+        {
+            "data": {
+                "id": "99",
+                "name": "#99 Aftershocks",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "95": {
+                        "looted": "false",
+                        "description": "Gain 25 gold and Party Achievement: \"A Strongbox\" Add City Event  85 to the deck"
+                    }
+                }
+            },
+            "position": {
+                "x": -60,
+                "y": 1404
+            }
+        },
+        {
+            "data": {
+                "id": "100",
+                "name": "#100 Shifting Gears",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "76": {
+                        "looted": "false",
+                        "description": "Suffer 3 damage, gain WOUND and 10 gold"
+                    },
+                    "85": {
+                        "looted": "false",
+                        "description": "Suffer 3 damage, gain POISON and 10 gold"
+                    }
+                }
+            },
+            "position": {
+                "x": 410,
+                "y": 1404
+            }
+        },
+        {
+            "data": {
+                "id": "101",
+                "name": "#101 Shrouded Crypt",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "93": {
+                        "looted": "false",
+                        "description": "Gain \"Scroll of Haste\" (Item 159)"
+                    }
+                }
+            },
+            "position": {
+                "x": 885,
+                "y": 1404
+            }
+        },
+        {
+            "data": {
+                "id": "102",
+                "name": "#102 Bazaar of Knowledge",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "77": {
+                        "looted": "false",
+                        "description": "Gain \"Major Cure Potion\" (Item 090)"
+                    },
+                    "86": {
+                        "looted": "false",
+                        "description": "Unlock Diviner Solo Scenario \"Forecast of the Inevitable"
+                    }
+                }
+            },
+            "position": {
+                "x": -670,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "103",
+                "name": "#103 Where It Is Needed",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "81": {
+                        "looted": "false",
+                        "description": "Gain \"Scroll of Haste\" (Item 159) and 10 gold"
+                    }
+                }
+            },
+            "position": {
+                "x": -400,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "104",
+                "name": "#104 A Gaping Would",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "87": {
+                        "looted": "false",
+                        "description": "Suffer 2 damage, gain CURSE and 15 gold"
+                    }
+                }
+            },
+            "position": {
+                "x": -185,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "105",
+                "name": "#105 Monstrosities of a Cult",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "83": {
+                        "looted": "false",
+                        "description": "Gain \"Major Power Potion\" (Item 041)"
+                    },
+                    "88": {
+                        "looted": "false",
+                        "description": "Gain \"Second Chance Ring\" (Item 070)"
+                    }
+                }
+            },
+            "position": {
+                "x": 65,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "106",
+                "name": "#106 Intricate Work",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {}
+            },
+            "position": {
+                "x": 285,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "107",
+                "name": "#107 Mechanical Genius",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "78": {
+                        "looted": "false",
+                        "description": "\"Ancient Bow\" design (Item 157)"
+                    },
+                    "90": {
+                        "looted": "false",
+                        "description": "Read section 75 on page 49"
+                    }
+                }
+            },
+            "position": {
+                "x": 535,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "108",
+                "name": "#108 Prologue to the End",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {}
+            },
+            "position": {
+                "x": 750,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "109",
+                "name": "#109 Epilogue of a War",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "80": {
+                        "looted": "false",
+                        "description": "Gain 1 check and add Rift Event 19 to the deck"
+                    },
+                    "94": {
+                        "looted": "false",
+                        "description": "Gain 1 check and add Rift Event 20 to the deck"
+                    }
+                }
+            },
+            "position": {
+                "x": 1020,
+                "y": 1484
+            }
+        },
+        {
+            "data": {
+                "id": "110",
+                "name": "#110 A Circular Solution",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "84": {
+                        "looted": "false",
+                        "description": "Gain \"Mask of Terrors\" (Item 066)"
+                    }
+                }
+            },
+            "position": {
+                "x": -535,
+                "y": 1564
+            }
+        },
+        {
+            "data": {
+                "id": "111",
+                "name": "#111 The Shackles Loosen",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "82": {
+                        "looted": "false",
+                        "description": "\"Rejuvenation Greaves\" design (Item 158)"
+                    }
+                }
+            },
+            "position": {
+                "x": -60,
+                "y": 1564
+            }
+        },
+        {
+            "data": {
+                "id": "112",
+                "name": "#112 The Bottom of It",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {}
+            },
+            "position": {
+                "x": 410,
+                "y": 1564
+            }
+        },
+        {
+            "data": {
+                "id": "113",
+                "name": "#113 The Lost Thread",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {}
+            },
+            "position": {
+                "x": 1020,
+                "y": 1564
+            }
+        },
+        {
+            "data": {
+                "id": "114",
+                "name": "#114 Ink Not Yet Dry",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {}
+            },
+            "position": {
+                "x": 175,
+                "y": 1644
+            }
+        },
+        {
+            "data": {
+                "id": "115",
+                "name": "#115 Future Uncertain",
+                "pages": [],
+                "status": "hidden",
+                "notes": "",
+                "treasure": {
+                    "96": {
+                        "looted": "false",
+                        "description": "You find an old tome littered with technical drawings and design schematics of a wide array of exotic machines. There is a curious handwritten note inside the front cover:"
+                    }
+                }
+            },
+            "position": {
+                "x": 175,
+                "y": 1724
       }
     }
   ],
@@ -2526,6 +2896,405 @@
         "target": "40",
         "type": "requiredby"
       }
+        },
+        {
+            "data": {
+                "source": "51",
+                "target": "96",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "96",
+                "target": "97",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "97",
+                "target": "98",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "97",
+                "target": "99",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "97",
+                "target": "100",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "97",
+                "target": "101",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "102",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "103",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "104",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "105",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "106",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "107",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "108",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "98",
+                "target": "109",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "104",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "105",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "102",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "103",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "106",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "107",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "108",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "99",
+                "target": "109",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "106",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "107",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "102",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "103",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "104",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "105",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "108",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "100",
+                "target": "109",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "108",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "109",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "102",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "103",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "104",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "105",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "106",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "101",
+                "target": "107",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "102",
+                "target": "110",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "103",
+                "target": "110",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "104",
+                "target": "111",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "105",
+                "target": "111",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "106",
+                "target": "112",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "106",
+                "target": "112",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "107",
+                "target": "112",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "107",
+                "target": "112",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "109",
+                "target": "113",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "110",
+                "target": "114",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "110",
+                "target": "114",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "111",
+                "target": "114",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "111",
+                "target": "105",
+                "type": "blocks"
+            }
+        },
+        {
+            "data": {
+                "source": "111",
+                "target": "114",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "112",
+                "target": "114",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "112",
+                "target": "114",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "113",
+                "target": "114",
+                "type": "requiredby"
+            }
+        },
+        {
+            "data": {
+                "source": "113",
+                "target": "114",
+                "type": "unlocks"
+            }
+        },
+        {
+            "data": {
+                "source": "114",
+                "target": "115",
+                "type": "unlocks"
+            }
     }
   ]
 }
