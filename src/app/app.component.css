@@ -52,3 +52,11 @@ mat-toolbar .nav-row {
     border-bottom: 1px solid #ccc;
   }
 }
+.mat-badge-medium.mat-badge-after .mat-badge-content {
+  top: -5px;
+  right: -25px;
+}
+img.available-scenario {
+  width: 250px;
+  height: auto;
+}
