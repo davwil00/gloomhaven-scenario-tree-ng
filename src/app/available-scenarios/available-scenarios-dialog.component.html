@@ -1,0 +1,15 @@
+<mat-dialog-content>
+    The following scenarios are available:
+    
+    <mat-expansion-panel *ngFor="let scenario of availableScenarios">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{scenario.data.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-container *ngFor="let page of scenario.data.pages">
+            <a [href]="getImageUrl(page)" target="_blank"><img class="available-scenario" [src]="getImageUrl(page)" /></a>
+        </ng-container>
+    </mat-expansion-panel>
+</mat-dialog-content>
+<mat-dialog-actions></mat-dialog-actions>

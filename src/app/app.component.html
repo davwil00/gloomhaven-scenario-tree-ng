@@ -1,5 +1,6 @@
 <div class="wrapper">
     <app-export-tree [scenarios]="scenarios" (importScenarios)="handleScenariosImport($event)"></app-export-tree>
+    <available-scenarios></available-scenarios>
     <app-scenario-info
       [scenarios]="scenarios"
       [selectedScenario]="selectedScenario"
