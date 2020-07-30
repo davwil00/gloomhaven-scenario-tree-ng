@@ -12,6 +12,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion'
+import { MatBadgeModule } from '@angular/material/badge'
 
 @NgModule({
     imports: [
@@ -27,7 +28,8 @@ import { MatExpansionModule } from '@angular/material/expansion'
         MatAutocompleteModule,
         MatSlideToggleModule,
         MatListModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatBadgeModule
     ],
     exports: [
         MatFormFieldModule,
@@ -42,7 +44,8 @@ import { MatExpansionModule } from '@angular/material/expansion'
         MatAutocompleteModule,
         MatSlideToggleModule,
         MatListModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatBadgeModule
     ],
     providers: [ ]
   })
