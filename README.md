@@ -1,10 +1,11 @@
 # Gloomhaven Scenario Tree
 
-This is a simple application to be able to easily visualize your Gloomhaven campaign state. The idea was to easily show what scenarios are currently available to your party, and to be able to track where those scenarios were unlocked from. For added convenience any scenario's pages can be viewed within the app so you can view / review any selected scenario. 
+This is a simple application to be able to easily visualize your Gloomhaven campaign state. The idea was to easily show what scenarios are currently available to your party, and to be able to track where those scenarios were unlocked from. For added convenience any scenario's pages can be viewed within the app so you can view / review any selected scenario.
 
 This applicaion was created with the help of the Gloomhaven Scenario Flowchart found here `https://boardgamegeek.com/filepage/143772/scenario-flowchart`
 
 ## Dependencies
+
 NodeJS must be installed and in your PATH (https://nodejs.org/en/)
 
 ## Install
@@ -12,6 +13,7 @@ NodeJS must be installed and in your PATH (https://nodejs.org/en/)
 Run `npm install`
 
 ## Secrets
+
 Set the `gistId` and `githubToken` values in `environment.ts` and `environment.prod.ts`
 
 ## Development server

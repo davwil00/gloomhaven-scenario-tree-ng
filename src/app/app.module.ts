@@ -10,10 +10,12 @@ import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { TreeComponent } from './tree/tree.component';
 import { AssetService } from './asset.service';
-import { ScenarioInfoComponent, ScenarioInfoDialogComponent } from './scenario-info/scenario-info.component';
+import {
+  ScenarioInfoComponent,
+  ScenarioInfoDialogComponent
+} from './scenario-info/scenario-info.component';
 import { TreeLogicService } from './tree-logic.service';
 import { KeyComponent } from './key/key.component';
-
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { KeyComponent } from './key/key.component';
     ScenarioInfoDialogComponent,
     ExportTreeComponent,
     ImportExportDialogComponent,
-    KeyComponent,
+    KeyComponent
   ],
   imports: [
     BrowserModule,
@@ -33,11 +35,8 @@ import { KeyComponent } from './key/key.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  entryComponents: [
-    ScenarioInfoDialogComponent,
-    ImportExportDialogComponent
-  ],
-  providers: [ AssetService, TreeLogicService ],
-  bootstrap: [ AppComponent ]
+  entryComponents: [ScenarioInfoDialogComponent, ImportExportDialogComponent],
+  providers: [AssetService, TreeLogicService],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
