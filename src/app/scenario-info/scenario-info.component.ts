@@ -10,39 +10,38 @@ import * as cloneDeep from 'lodash.clonedeep';
 @Component({
   selector: 'app-scenario-info-dialog',
   templateUrl: './scenario-info-dialog.html',
-  styles: [`
-    .mat-dialog-content {
+  styles: [
+    `
+      .mat-dialog-content {
         max-height: 100vh;
         padding: 0;
         margin: 0;
         width: 100%;
-    }
-    p {
-      position: absolute;
-      right: 0;
-      margin: 0;
-      padding: 15px;
-      font-weight: 500;
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-    @media (max-width: 767px) {
-      p {
-        font-size: 8px;
       }
-    }
-    .scenario-image {
-      width: 100%;
-    }
-  `]
+      p {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        padding: 15px;
+        font-weight: 500;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      @media (max-width: 767px) {
+        p {
+          font-size: 8px;
+        }
+      }
+      .scenario-image {
+        width: 100%;
+      }
+    `
+  ]
 })
 export class ScenarioInfoDialogComponent {
   public selectedScenario: any;
-  constructor(
-    public dialogRef: MatDialogRef<ScenarioInfoDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    public assetService: AssetService) {
-      this.selectedScenario = data.selectedScenario;
-    }
+  constructor(public dialogRef: MatDialogRef<ScenarioInfoDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any, public assetService: AssetService) {
+    this.selectedScenario = data.selectedScenario;
+  }
 
   close(): void {
     this.dialogRef.close();
@@ -64,8 +63,8 @@ export class ScenarioInfoDialogComponent {
   styleUrls: ['./scenario-info.component.css']
 })
 export class ScenarioInfoComponent implements OnInit, OnChanges {
-  @Input()  selectedScenario: any;
-  @Input()  scenarios: any;
+  @Input() selectedScenario: any;
+  @Input() scenarios: any;
   @Output() selectScenario = new EventEmitter();
   @Output() updateScenario = new EventEmitter<any>();
   filteredScenarios: Observable<any[]>;
@@ -78,18 +77,14 @@ export class ScenarioInfoComponent implements OnInit, OnChanges {
     treasure: {}
   };
   public treasureArray: any[];
-  constructor(
-    public dialog: MatDialog,
-    private snackBar: MatSnackBar
-  ) { }
+  constructor(public dialog: MatDialog, private snackBar: MatSnackBar) {}
 
   ngOnInit() {
-    this.filteredScenarios = this.scenarioCtrl.valueChanges
-      .pipe(
-        startWith<any>(''),
-        map(value => typeof value === 'string' ? value : value.data.name),
-        map(scenario => scenario ? this.filterScenarios(scenario) : this.scenarios.nodes.slice())
-      );
+    this.filteredScenarios = this.scenarioCtrl.valueChanges.pipe(
+      startWith<any>(''),
+      map((value) => (typeof value === 'string' ? value : value.data.name)),
+      map((scenario) => (scenario ? this.filterScenarios(scenario) : this.scenarios.nodes.slice()))
+    );
   }
   ngOnChanges() {
     if (this.selectedScenario !== null) {
@@ -102,10 +97,10 @@ export class ScenarioInfoComponent implements OnInit, OnChanges {
     }
   }
   public isSideScenario() {
-    return (parseInt(this.scenario.id, 10) > 51);
+    return parseInt(this.scenario.id, 10) > 51;
   }
   public showScenarioName(node) {
-    return (node.data.status !== 'locked' && node.data.status !== 'hidden');
+    return node.data.status !== 'locked' && node.data.status !== 'hidden';
   }
   public handleStatusChange(status) {
     this.scenario.status = status;
@@ -134,7 +129,7 @@ export class ScenarioInfoComponent implements OnInit, OnChanges {
     this.updateScenario.emit(this.scenario);
     if (showSnackBar) {
       this.snackBar.open('Notes Saved!', '', {
-        duration: 1500,
+        duration: 1500
       });
     }
   }
@@ -159,10 +154,10 @@ export class ScenarioInfoComponent implements OnInit, OnChanges {
   }
   private filterScenarios(value: string) {
     const filterValue = value.toLowerCase();
-    return this.scenarios.nodes.filter(node => node.data.name.toLowerCase().includes(filterValue));
+    return this.scenarios.nodes.filter((node) => node.data.name.toLowerCase().includes(filterValue));
   }
   private treasureArrayFromObject(treasureObject: any) {
-    return Object.keys(treasureObject).map(number => ({
+    return Object.keys(treasureObject).map((number) => ({
       id: number,
       looted: treasureObject[number].looted.toString() === 'true',
       description: treasureObject[number].description

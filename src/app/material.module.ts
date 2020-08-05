@@ -15,38 +15,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonToggleModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatIconModule,
-    MatSnackBarModule,
-    MatTabsModule,
-    MatAutocompleteModule,
-    MatSlideToggleModule,
-    MatListModule,
-    MatExpansionModule,
-    MatBadgeModule
-  ],
-  exports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonToggleModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatIconModule,
-    MatSnackBarModule,
-    MatTabsModule,
-    MatAutocompleteModule,
-    MatSlideToggleModule,
-    MatListModule,
-    MatExpansionModule,
-    MatBadgeModule
-  ],
+  imports: [MatFormFieldModule, MatInputModule, MatButtonToggleModule, MatButtonModule, MatDialogModule, MatDividerModule, MatIconModule, MatSnackBarModule, MatTabsModule, MatAutocompleteModule, MatSlideToggleModule, MatListModule, MatExpansionModule, MatBadgeModule],
+  exports: [MatFormFieldModule, MatInputModule, MatButtonToggleModule, MatButtonModule, MatDialogModule, MatDividerModule, MatIconModule, MatSnackBarModule, MatTabsModule, MatAutocompleteModule, MatSlideToggleModule, MatListModule, MatExpansionModule, MatBadgeModule],
   providers: []
 })
 export class MaterialModule {}

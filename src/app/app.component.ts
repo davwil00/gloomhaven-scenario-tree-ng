@@ -18,11 +18,7 @@ export class AppComponent implements OnInit {
   blockedScenarios: Array<NodeData> = [];
   scenarioMap: { [key: string]: NodeData };
 
-  constructor(
-    private assetService: AssetService,
-    private treeLogicService: TreeLogicService,
-    private snackBar: MatSnackBar
-  ) {}
+  constructor(private assetService: AssetService, private treeLogicService: TreeLogicService, private snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.assetService.getScenariosJSON().subscribe((allScenarios) => {
@@ -49,16 +45,12 @@ export class AppComponent implements OnInit {
 
   public handleScenarioSelect(scenario) {
     if (scenario) {
-      const rawScenario =
-        typeof scenario.data === 'function' ? scenario.data() : scenario.data;
+      const rawScenario = typeof scenario.data === 'function' ? scenario.data() : scenario.data;
       rawScenario.activePage = rawScenario.pages[0];
       rawScenario.imageUrl = this.getImageUrl(rawScenario.activePage);
       this.selectedScenario = rawScenario;
       /* Call this in case user drags the scenario. This will save it even if they make no other changes */
-      this.allScenarios = this.treeLogicService.updateScenario(
-        this.allScenarios,
-        this.selectedScenario
-      );
+      this.allScenarios = this.treeLogicService.updateScenario(this.allScenarios, this.selectedScenario);
       this.assetService.setScenariosJSON(this.allScenarios);
     } else {
       this.selectedScenario = null;
@@ -75,22 +67,13 @@ export class AppComponent implements OnInit {
     }
 
     this.selectedScenario.activePage = pages[activeIndex];
-    this.selectedScenario.imageUrl = this.getImageUrl(
-      this.selectedScenario.activePage
-    );
+    this.selectedScenario.imageUrl = this.getImageUrl(this.selectedScenario.activePage);
   }
 
   public handleScenarioUpdate(changedScenario) {
-    this.allScenarios = this.treeLogicService.updateScenario(
-      this.allScenarios,
-      changedScenario
-    );
+    this.allScenarios = this.treeLogicService.updateScenario(this.allScenarios, changedScenario);
     this.assetService.setScenariosJSON(this.allScenarios);
-    this.handleScenarioSelect(
-      this.allScenarios.nodes.find(
-        (scenario) => scenario.data.id === changedScenario.id
-      )
-    );
+    this.handleScenarioSelect(this.allScenarios.nodes.find((scenario) => scenario.data.id === changedScenario.id));
   }
 
   public handleScenariosImport(scenarios) {
@@ -116,25 +99,14 @@ export class AppComponent implements OnInit {
           switch (edge.type) {
             case 'unlocks':
               if (!unlocked && status === 'complete') {
-                console.log(
-                  `%c Scenario ${edge.target} unlocked by scenario ${edge.source}`,
-                  'color: green'
-                );
+                console.log(`%c Scenario ${edge.target} unlocked by scenario ${edge.source}`, 'color: green');
                 unlocked = true;
               }
               break;
 
             case 'blocks':
-              if (
-                !blocked &&
-                status === 'complete' &&
-                edge.target !== '33' &&
-                edge.source !== '34'
-              ) {
-                console.log(
-                  `%c Scenario ${edge.target} is blocked by scenario ${edge.source}`,
-                  'color: red'
-                );
+              if (!blocked && status === 'complete' && edge.target !== '33' && edge.source !== '34') {
+                console.log(`%c Scenario ${edge.target} is blocked by scenario ${edge.source}`, 'color: red');
                 this.blockedScenarios.push(nodeData);
                 blocked = true;
               }
@@ -142,10 +114,7 @@ export class AppComponent implements OnInit {
 
             case 'requiredby':
               if (requirementsSatified && status !== 'complete') {
-                console.log(
-                  `%c Scenario ${edge.target} requires scenario ${edge.source}`,
-                  'color: yellow'
-                );
+                console.log(`%c Scenario ${edge.target} requires scenario ${edge.source}`, 'color: yellow');
                 requirementsSatified = false;
               }
               break;
@@ -159,14 +128,8 @@ export class AppComponent implements OnInit {
         case '33':
           // 42 blocks 33 if 25 not done
           // 34 blocks 33 if 24 not done or 42 done
-          if (
-            this.scenarioMap['34'].status === 'complete' &&
-            (this.scenarioMap['24'].status !== 'complete' ||
-              this.scenarioMap['42'].status === 'complete')
-          ) {
-            console.log(
-              'Scenario 33 is blocked because scenario 34 is complete and either scenario 24 is complete or scenario 42 is not complete'
-            );
+          if (this.scenarioMap['34'].status === 'complete' && (this.scenarioMap['24'].status !== 'complete' || this.scenarioMap['42'].status === 'complete')) {
+            console.log('Scenario 33 is blocked because scenario 34 is complete and either scenario 24 is complete or scenario 42 is not complete');
             this.blockedScenarios.push(nodeData);
             return;
           }
@@ -178,13 +141,8 @@ export class AppComponent implements OnInit {
         case '31':
         case '27':
           // if 35 is complete and 21 not done
-          if (
-            this.scenarioMap['35'].status === 'complete' &&
-            this.scenarioMap['21'].status !== 'complete'
-          ) {
-            console.log(
-              `Scenario ${nodeData.id} is blocked because scenarios 35 is complete and scenario 21 is not`
-            );
+          if (this.scenarioMap['35'].status === 'complete' && this.scenarioMap['21'].status !== 'complete') {
+            console.log(`Scenario ${nodeData.id} is blocked because scenarios 35 is complete and scenario 21 is not`);
             this.blockedScenarios.push(nodeData);
             return;
           }
