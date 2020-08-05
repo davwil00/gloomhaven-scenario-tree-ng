@@ -11,42 +11,42 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatListModule } from '@angular/material/list';
-import { MatExpansionModule } from '@angular/material/expansion'
-import { MatBadgeModule } from '@angular/material/badge'
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
-    imports: [
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonToggleModule,
-        MatButtonModule,
-        MatDialogModule,
-        MatDividerModule,
-        MatIconModule,
-        MatSnackBarModule,
-        MatTabsModule,
-        MatAutocompleteModule,
-        MatSlideToggleModule,
-        MatListModule,
-        MatExpansionModule,
-        MatBadgeModule
-    ],
-    exports: [
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonToggleModule,
-        MatButtonModule,
-        MatDialogModule,
-        MatDividerModule,
-        MatIconModule,
-        MatSnackBarModule,
-        MatTabsModule,
-        MatAutocompleteModule,
-        MatSlideToggleModule,
-        MatListModule,
-        MatExpansionModule,
-        MatBadgeModule
-    ],
-    providers: [ ]
-  })
-  export class MaterialModule { }
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonToggleModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatTabsModule,
+    MatAutocompleteModule,
+    MatSlideToggleModule,
+    MatListModule,
+    MatExpansionModule,
+    MatBadgeModule
+  ],
+  exports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonToggleModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatTabsModule,
+    MatAutocompleteModule,
+    MatSlideToggleModule,
+    MatListModule,
+    MatExpansionModule,
+    MatBadgeModule
+  ],
+  providers: []
+})
+export class MaterialModule {}

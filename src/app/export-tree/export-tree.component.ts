@@ -10,12 +10,9 @@ import { ImportExportDialogComponent } from './import-export-dialog.component';
 export class ExportTreeComponent implements OnInit {
   @Input() scenarios: any;
   @Output() importScenarios = new EventEmitter();
-  constructor(
-    public dialog: MatDialog
-  ) { }
+  constructor(public dialog: MatDialog) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   public showImportExportModal() {
     const dialogRef = this.dialog.open(ImportExportDialogComponent, {
       width: '600px',
@@ -28,8 +25,4 @@ export class ExportTreeComponent implements OnInit {
       }
     });
   }
-
-
 }
-
-

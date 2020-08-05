@@ -8,9 +8,8 @@ describe('ExportTreeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExportTreeComponent ]
-    })
-    .compileComponents();
+      declarations: [ExportTreeComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
