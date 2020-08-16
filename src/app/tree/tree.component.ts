@@ -17,15 +17,14 @@ export class TreeComponent implements OnChanges {
   private initialLoad = true;
   private cy: any;
 
-  public constructor() {}
-  public ngOnChanges(change: SimpleChanges): any {
+  public ngOnChanges(change: SimpleChanges): void {
     this.render();
     if (change.selectedScenario && change.selectedScenario.currentValue !== null && change.selectedScenario.currentValue.status !== 'hidden') {
       this.panToSelected();
     }
     this.updateStyles();
   }
-  public render() {
+  public render(): void {
     let pan: { x: number; y: number };
     let selectedNode = null;
     if (!this.initialLoad) {
@@ -83,21 +82,27 @@ export class TreeComponent implements OnChanges {
     this.cy.nodes('[status = "hidden"]').incomers('edge').css({ visibility: 'hidden' });
   }
   private colorScenarios() {
-    // Incomplete nodes are black
-    this.cy.nodes('[status = "incomplete"], [status = "locked"]').css({
-      color: '#000',
-      'background-color': '#000',
+    // Incomplete (available) nodes are light blue
+    this.cy.nodes('[status = "incomplete"]').css({
+      color: '#01579B',
+      'background-color': '#03A9F4',
       'border-width': '0px'
     });
-    // complete nodes are purple
+    // Locked nodes are grey
+    this.cy.nodes('[status = "locked"]').css({
+      color: '#616161',
+      'background-color': '#9E9E9E',
+      'border-width': '0px'
+    });
+    // complete nodes are green
     this.cy.nodes('[status = "complete"]').css({
-      color: '#3f51b5',
-      'background-color': '#3f51b5',
+      color: '#1B5E20',
+      'background-color': '#4CAF50',
       'border-width': '0px'
     });
     // attempted nodes are an unfilled circle
     this.cy.nodes('[status = "attempted"]').css({
-      color: '#000',
+      color: '#03A9F4',
       'background-color': '#fff',
       'border-width': '1px'
     });
@@ -109,6 +114,7 @@ export class TreeComponent implements OnChanges {
     });
     // Scenarios blocked by other scenarios being complete are red
     this.cy.nodes('[status = "complete"]').outgoers('edge[type = "blocks"][target != "27"][target != "31"][target != "33"]').targets('node[status != "complete"]').css({
+      color: '#B71C1C',
       'background-color': '#f44336',
       'border-width': '0px'
     });
@@ -284,7 +290,8 @@ export class TreeComponent implements OnChanges {
         })
         .selector('node[status = "locked"]')
         .css({
-          content: (ele) => '#' + ele.data('id')
+          content: (ele) => '#' + ele.data('id'),
+          'background-color': '#0F0'
         })
         .selector('edge')
         .css({
