@@ -86,21 +86,21 @@ export class AppComponent implements OnInit {
   }
 
   private processIncompleteScenario(nodeData: NodeData) {
-    let unlocked = false;
+    let unlocked = true;
     let blocked = false;
     let requirementsSatified = true;
 
     this.allScenarios.edges
-      .map((edge) => edge.data)
-      .forEach((edge) => {
+      .map(edge => edge.data)
+      .forEach(edge => {
         if (edge.target === nodeData.id) {
           const status = this.scenarioMap[edge.source].status;
 
           switch (edge.type) {
             case 'unlocks':
-              if (!unlocked && status === 'complete') {
-                console.log(`%c Scenario ${edge.target} unlocked by scenario ${edge.source}`, 'color: green');
-                unlocked = true;
+              if (status !== 'complete') {
+                console.log(`%c Scenario ${edge.target} locked by scenario ${edge.source}`, 'color: green');
+                unlocked = false;
               }
               break;
 
