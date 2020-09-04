@@ -1,10 +1,12 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormControl, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AssetService } from '../asset.service';
-import { request } from '@octokit/request';
 import jsonFormat from 'json-format';
 import { environment } from './../../environments/environment';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import { of, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-import-export-dialog',
@@ -24,9 +26,13 @@ export class ImportExportDialogComponent {
   public scenarios: any;
   formattedChangedScenarios: string;
   public encodedScenarios = new FormControl('', [Validators.required, this.validJSONValidator()]);
-  public importError: String = null;
+  public importError: string = null;
 
-  constructor(public dialogRef: MatDialogRef<ImportExportDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any, public assetService: AssetService) {
+  constructor(public dialogRef: MatDialogRef<ImportExportDialogComponent>, 
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              public assetService: AssetService,
+              private http: HttpClient) {
+
     this.scenarios = data.scenarios;
     this.formattedChangedScenarios = jsonFormat(this.assetService.getEncodedScenarios(this.scenarios));
     this.encodedScenarios.setValue(this.formattedChangedScenarios);
@@ -43,35 +49,35 @@ export class ImportExportDialogComponent {
     this.encodedScenarios.updateValueAndValidity();
   }
 
-  public saveScenariosToGist() {
-    const requestWithAuth = request.defaults({
-      headers: {
-        authorization: `token ${environment.githubToken}`
-      }
-    });
-
-    const result = requestWithAuth(`PATCH /gists/${environment.gistId}`, {
-      gist_id: environment.gistId,
-      files: {
-        'gloomhaven.json': {
-          content: this.formattedChangedScenarios
-        }
-      }
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          alert('Saved');
-        } else {
-          console.error(response.status);
-          console.error(response.data);
-        }
-      })
-      .catch((err) => console.error(err));
+  public saveScenariosToGist(): void {
+    const payload = {
+        filename: 'gloomhaven.json',
+        content: this.formattedChangedScenarios
+    }
+    this.http.patch<void>(`https://githelper.davwil00.co.uk/${environment.gistId}`, payload)
+      .pipe(catchError(this.handleError))
+      .subscribe()
   }
 
   private validJSONValidator(): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } => {
       return this.importError != null ? { validJSON: { value: this.importError } } : null;
     };
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('An error occurred:', error.error.message);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong.
+      console.error(
+        `Backend returned code ${error.status}, ` +
+        `body was: ${error.error}`);
+    }
+    // Return an observable with a user-facing error message.
+    return throwError(
+      'Something bad happened; please try again later.');
   }
 }

@@ -5,10 +5,13 @@ import { map, withLatestFrom } from 'rxjs/operators';
 import * as cloneDeep from 'lodash.clonedeep';
 import { environment } from '../environments/environment';
 import { Scenarios } from './models/models';
+
 @Injectable()
 export class AssetService {
   private defaultScenariosJSON: any;
+
   constructor(private http: HttpClient) {}
+  
   public getScenariosJSON(): Observable<Scenarios> {
     const gistUrl = `https://gist.githubusercontent.com/davwil00/${environment.gistId}/raw/gloomhaven.json`;
     return this.http.get<string>(gistUrl).pipe(
@@ -24,6 +27,7 @@ export class AssetService {
       })
     );
   }
+
   public getDecodedScenarios(currentNodes, savedScenarios) {
     currentNodes.forEach((node, index) => {
       const savedNode = savedScenarios.nodes.find((saved) => saved.id === node.data.id);
