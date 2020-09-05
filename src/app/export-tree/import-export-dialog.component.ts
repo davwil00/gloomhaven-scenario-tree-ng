@@ -7,6 +7,7 @@ import { environment } from './../../environments/environment';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { of, throwError } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-import-export-dialog',
@@ -31,7 +32,8 @@ export class ImportExportDialogComponent {
   constructor(public dialogRef: MatDialogRef<ImportExportDialogComponent>, 
               @Inject(MAT_DIALOG_DATA) public data: any,
               public assetService: AssetService,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private snackBar: MatSnackBar) {
 
     this.scenarios = data.scenarios;
     this.formattedChangedScenarios = jsonFormat(this.assetService.getEncodedScenarios(this.scenarios));
@@ -54,9 +56,13 @@ export class ImportExportDialogComponent {
         filename: 'gloomhaven.json',
         content: this.formattedChangedScenarios
     }
-    this.http.patch<void>(`https://githelper.davwil00.co.uk/${environment.gistId}`, payload)
+    this.http.patch(`https://githelper.davwil00.co.uk/${environment.gistId}`, payload, {responseType: 'text'})
       .pipe(catchError(this.handleError))
-      .subscribe()
+      .subscribe(() => {
+        this.snackBar.open('Saved!', '', {
+          duration: 1500
+        });
+      })
   }
 
   private validJSONValidator(): ValidatorFn {
