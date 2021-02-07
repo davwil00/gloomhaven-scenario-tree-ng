@@ -1,4 +1,7 @@
 <mat-dialog-content>
+  <div *ngIf="gistServerOffline" class="alert-danger">
+    <p>The server is currently offline, you will not be able to save changes.</p>
+  </div>
   <p>Changes are saved automatically to your browser's local storage. However, you can save this data elsewhere by copying the encoded string below.</p>
   <p>To import, paste your encoded string over the text below and click import.</p>
   <form>
@@ -9,6 +12,6 @@
   </form>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-raised-button color="primary" type="button" (click)="saveScenariosToGist()">Save</button>
+  <button mat-raised-button color="primary" type="button" [disabled]="gistServerOffline" (click)="saveScenariosToGist()">Save</button>
   <button mat-raised-button color="basic" type="button" (click)="importScenarios()">Import</button>
 </mat-dialog-actions>
