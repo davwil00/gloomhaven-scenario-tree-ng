@@ -13,7 +13,7 @@ export class AssetService {
   constructor(private http: HttpClient) {}
   
   public getScenariosJSON(): Observable<Scenarios> {
-    const gistUrl = `https://gist.githubusercontent.com/davwil00/${environment.gistId}/raw/gloomhaven.json`;
+    const gistUrl = `https://gist.githubusercontent.com/davwil00/${environment.gistId}/raw/gloomhaven.json?${new Date().getTime()}`;
     return this.http.get<string>(gistUrl).pipe(
       withLatestFrom(this.http.get<any>('./assets/scenarios.json')),
       map(([encodedTree, scenarios]) => {
