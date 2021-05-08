@@ -1,0 +1,56 @@
+@font-face {
+  font-family: gloomhaven;
+  src: url('/assets/fonts/GloomhavenGlyph-Regular.otf');
+}
+
+.container {
+  display: flex;
+}
+
+.keyboard {
+  display: flex;
+  max-width: 30em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gloomhaven-font {
+  font-family: gloomhaven;
+}
+
+.key {
+  padding: 10px;
+  font-size: 36px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 1em;
+  cursor: pointer;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message textarea {
+  width: 350px;
+  height: 200px;
+}
+
+.found-messages {
+  display: flex;
+}
+
+mat-card {
+  width: 200px;
+  margin: 15px;
+}
+
+.found-letters {
+  margin-left: 10px;
+}
+.found-letter {
+  margin: 50px;
+  font-size: 36px;
+}

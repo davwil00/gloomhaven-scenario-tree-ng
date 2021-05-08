@@ -39,4 +39,8 @@
       <mat-list-item *ngFor="let blockedScenario of blockedScenarios">{{ blockedScenario.name }}</mat-list-item>
     </mat-list>
   </mat-tab>
+  <mat-tab>
+    <ng-template matTabLabel>Messages</ng-template>
+    <messages></messages>
+  </mat-tab>
 </mat-tab-group>

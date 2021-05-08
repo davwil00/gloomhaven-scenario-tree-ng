@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="keyboard">
+    <div class="key" *ngFor="let letter of letters" (click)="addLetter(letter)">
+      <span class="gloomhaven-font">{{letter}}</span>
+      <span class="letter">{{letter}}</span>
+    </div>
+  </div>
+  <div class="message">
+    <textarea readonly>{{message}}</textarea>
+    <textarea readonly class="gloomhaven-font">{{message}}</textarea>
+    <button type="button" (click)="clear()">Clear</button>
+  </div>
+  <div class="found-letters">
+    <h2>Found Letters</h2>
+    <span class="found-letter">B</span>
+    <span class="found-letter">D</span>
+  </div>
+</div>
+
+<div class="found-messages">
+  <mat-card>
+    <mat-card-title>From scenario 15</mat-card-title>
+    <mat-card-content>Search for the rise of the decoder ring look to the end of word 11 on line 3</mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>From envelope X</mat-card-title>
+    <mat-card-content>
+      <p>We call from the dust-from the aged bones of those you have killed.</p>
+      <p>Speak our name into his web and we will be free.</p>
+      <p>10 clues you must find - 10 letters to our name.<p>
+      <p>Here is the first: B</p>
+    </mat-card-content>
+  </mat-card>
+</div>

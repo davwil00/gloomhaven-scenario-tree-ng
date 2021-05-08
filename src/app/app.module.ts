@@ -13,12 +13,24 @@ import { AssetService } from './asset.service';
 import { ScenarioInfoComponent, ScenarioInfoDialogComponent } from './scenario-info/scenario-info.component';
 import { TreeLogicService } from './tree-logic.service';
 import { KeyComponent } from './key/key.component';
+import { MessagesComponent } from "./messages/messages.component";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
-  declarations: [AppComponent, TreeComponent, ScenarioInfoComponent, ScenarioInfoDialogComponent, ExportTreeComponent, ImportExportDialogComponent, KeyComponent],
-  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, MaterialModule, FormsModule, ReactiveFormsModule],
+  declarations: [
+    AppComponent,
+    TreeComponent,
+    ScenarioInfoComponent,
+    ScenarioInfoDialogComponent,
+    ExportTreeComponent,
+    ImportExportDialogComponent,
+    KeyComponent,
+    MessagesComponent
+  ],
+  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, MaterialModule, FormsModule, ReactiveFormsModule, MatCardModule],
   entryComponents: [ScenarioInfoDialogComponent, ImportExportDialogComponent],
   providers: [AssetService, TreeLogicService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
