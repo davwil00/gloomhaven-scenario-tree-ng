@@ -9,11 +9,11 @@ export class MessagesComponent {
 
   message = "";
 
-  addLetter(letter: string) {
+  addLetter(letter: string): void {
     this.message += (letter == '_' ? ' ' : letter);
   }
 
-  clear() {
+  clear(): void {
     this.message = '';
   }
 
@@ -21,5 +21,9 @@ export class MessagesComponent {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     letters.push('_');
     return letters;
+  }
+
+  get numbers(): Array<string> {
+    return '0123456789'.split('')
   }
 }
