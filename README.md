@@ -14,7 +14,7 @@ Run `npm install`
 
 ## Secrets
 
-Set the `gistId` and `githubToken` values in `environment.ts` and `environment.prod.ts`
+Set the `gistId` value in `environment.ts` and `environment.prod.ts`
 
 ## Development server
 
