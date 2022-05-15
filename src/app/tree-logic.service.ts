@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as cloneDeep from 'lodash.clonedeep';
+import * as cloneDeep from 'lodash/fp/cloneDeep';
 @Injectable()
 export class TreeLogicService {
   constructor() {}

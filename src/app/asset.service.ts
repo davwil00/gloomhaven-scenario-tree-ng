@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, withLatestFrom } from 'rxjs/operators';
-import * as cloneDeep from 'lodash.clonedeep';
+import * as cloneDeep from 'lodash/fp/cloneDeep';
 import { environment } from '../environments/environment';
 import { Scenarios } from './models/models';
 

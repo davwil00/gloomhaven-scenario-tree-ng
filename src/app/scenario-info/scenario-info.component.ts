@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
-import * as cloneDeep from 'lodash.clonedeep';
+import * as cloneDeep from 'lodash/fp/cloneDeep';
 
 @Component({
   selector: 'app-scenario-info-dialog',
