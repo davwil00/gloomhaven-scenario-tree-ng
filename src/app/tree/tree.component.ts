@@ -258,30 +258,40 @@ export class TreeComponent implements OnChanges {
         });
     }
     if (knowledgeIsPowerCount > 1) {
-      this.cy
-        .nodes("#98, #99, #100, #101")
-        .outgoers('[type = "requiredby"]')
-        .css({
-          visibility: "hidden",
-        })
-        .targets()
-        .css({
-          "background-color": "#000000",
-          "border-width": "0px",
-        });
+      [98, 99, 100, 101].forEach(scenarioId => {
+        const node = this.cy.nodes(`#${scenarioId}`)
+        if (node.data('status') === 'incomplete') {
+          this.cy
+            .nodes(`#${scenarioId}`)
+            .outgoers('[type = "requiredby"]')
+            .css({
+              visibility: "hidden",
+            })
+            .targets()
+            .css({
+              "background-color": "#03A9F4",
+              "border-width": "0px",
+            });
+        }
+      })
     }
     if (perilAvertedCount > 1) {
-      this.cy
-        .nodes("#110, #111, #112, #113")
-        .outgoers('[type = "requiredby"]')
-        .css({
-          visibility: "hidden",
-        })
-        .targets()
-        .css({
-          "background-color": "#000000",
-          "border-width": "0px",
-        });
+      [110, 111, 112, 113].forEach(scenarioId => {
+        const node = this.cy.nodes(`#${scenarioId}`)
+        if (node.data('status') === 'incomplete') {
+          this.cy
+            .nodes(`#${scenarioId}`)
+            .outgoers('[type = "requiredby"]')
+            .css({
+              visibility: "hidden",
+            })
+            .targets()
+            .css({
+              "background-color": "#03A9F4",
+              "border-width": "0px",
+            });
+        }
+      })
     }
   }
   private nodeClicked(e) {

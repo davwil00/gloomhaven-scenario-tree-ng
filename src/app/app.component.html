@@ -2,9 +2,11 @@
   <mat-tab label="Tree">
     <ng-template matTabContent>
       <div class="wrapper">
-        <app-export-tree [scenarios]="allScenarios" (importScenarios)="handleScenariosImport($event)"></app-export-tree>
         <app-scenario-info [scenarios]="allScenarios" [selectedScenario]="selectedScenario" (selectScenario)="handleScenarioSelect($event)" (updateScenario)="handleScenarioUpdate($event)"> </app-scenario-info>
-        <app-tree [elements]="allScenarios" [selectedScenario]="selectedScenario" (selectScenario)="handleScenarioSelect($event)" (updateScenario)="handleScenarioUpdate($event)"></app-tree>
+        <!-- <div class="main-tree"> -->
+          <app-export-tree [scenarios]="allScenarios" (importScenarios)="handleScenariosImport($event)"></app-export-tree>
+          <app-tree [elements]="allScenarios" [selectedScenario]="selectedScenario" (selectScenario)="handleScenarioSelect($event)" (updateScenario)="handleScenarioUpdate($event)"></app-tree>
+        <!-- </div> -->
       </div>
     </ng-template>
   </mat-tab>
