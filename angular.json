@@ -32,7 +32,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -44,6 +43,14 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ]
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           }
         },
@@ -55,8 +62,12 @@
           "configurations": {
             "production": {
               "browserTarget": "gloomhaven-scenario-tree-ng:build:production"
+            },
+            "development": {
+              "browserTarget": "gloomhaven-scenario-tree-ng:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
