@@ -25,13 +25,12 @@ jobs:
     - name: Build
       run: npm run build
     - name: Deploy
-      uses: wlixcc/SFTP-Deploy-Action@v1.0
+      uses: wangyucode/sftp-upload-action@v1.4.8
       with:
-        username: 'github'
-        server: ${{secrets.SSH_URL}}
-        ssh_private_key: ${{secrets.SSH_PRIVATE_KEY}}
-        local_path: './dist/*'
-        remote_path: '/var/www/gloomhaven-scenario-tree'
+        host: ${{ secrets.SSH_URL }}
+        username: github
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY }} 
+        forceUpload: true
+        localDir: '/dist/*'
+        remoteDir: '/var/www/gloomhaven-scenario-tree'
         port: 18022
-        sftp_only: true
-  
