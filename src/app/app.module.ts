@@ -15,6 +15,7 @@ import { TreeLogicService } from './tree-logic.service';
 import { KeyComponent } from './key/key.component';
 import { MessagesComponent } from "./messages/messages.component";
 import { MatCardModule } from "@angular/material/card";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -27,8 +28,16 @@ import { MatCardModule } from "@angular/material/card";
     KeyComponent,
     MessagesComponent
   ],
-  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, MaterialModule, FormsModule, ReactiveFormsModule, MatCardModule],
-  entryComponents: [ScenarioInfoDialogComponent, ImportExportDialogComponent],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatTooltipModule
+  ],
   providers: [AssetService, TreeLogicService],
   bootstrap: [AppComponent]
 })

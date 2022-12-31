@@ -1,55 +1,87 @@
-<div class="container">
+<div class="input-container">
   <div class="keyboard">
-    <div class="key" *ngFor="let letter of letters" (click)="addLetter(letter)">
-      <span class="gloomhaven-font">{{letter}}</span>
-      <span class="letter">{{letter}}</span>
+    <div class="letters">
+      <div class="key" *ngFor="let letter of letters" (click)="addLetter(letter)">
+        <span *ngIf="gloomhavenInput" class="gloomhaven-font">{{letter}}</span>
+        <span *ngIf="!gloomhavenInput" class="letter">{{letter}}</span>
+      </div>
+      <div class="key"><span class="letter" (click)="addLetter(' ')">_</span></div>
+      <div class="key"><span class="letter" (click)="removeLetter()">&#x232b;</span></div>
     </div>
 
-    <div class="key" *ngFor="let number of numbers" (click)="addLetter(number)">
-      <span class="gloomhaven-font">{{number}}</span>
-      <span class="letter">{{number}}</span>
+    <div class="numbers">
+      <div class="key" *ngFor="let number of numbers" (click)="addLetter(number)">
+        <span class="gloomhaven-font">{{number}}</span>
+        <span class="letter">{{number}}</span>
+      </div>
     </div>
   </div>
   <div class="message">
     <textarea readonly>{{message}}</textarea>
     <textarea readonly class="gloomhaven-font">{{message}}</textarea>
-    <button type="button" (click)="clear()">Clear</button>
-  </div>
-  <div class="found-letters">
-    <h2>Found Letters</h2>
-    <span class="found-letter">B</span><!-- The first letter-->
-    <span class="found-letter">D</span><!-- From clue in envelope X -->
-    <span class="found-letter">S</span><!-- From Isaac -->
-    <span class="found-letter">A</span> <!-- From ring of skulls-->
-    <span class="found-letter">L</span> <!-- From Golem-->
-    <span class="found-letter">M</span> <!-- From ring of skulls-->
-    <span class="found-letter">A</span> <!-- From scenario 41-->
+    <div class="buttons">
+      <button type="button" (click)="clear()">Clear</button>
+      <button type="button" [class.gloomhaven-font]="!gloomhavenInput" (click)="toggleInputMethod()">ABC</button>
+    </div>
   </div>
 </div>
 
 <div class="found-messages">
-  <mat-card>
-    <mat-card-title>From scenario 15</mat-card-title>
-    <mat-card-content>Search for the rise of the decoder ring look to the end of word 11 on line 3</mat-card-content>
-  </mat-card>
+  <h2>Found Letters</h2>
+  <div class="flex-container">
+    <mat-card>
+      <mat-card-title>From scenario 15 &#x2705;</mat-card-title>
+      <mat-card-content>Search for the rise of the decoder ring look to the end of word 11 on line 3</mat-card-content>
+    </mat-card>
 
-  <mat-card>
-    <mat-card-title>From envelope X</mat-card-title>
-    <mat-card-content>
-      <p>We call from the dust-from the aged bones of those you have killed.</p>
-      <p>Speak our name into his web and we will be free.</p>
-      <p>10 clues you must find - 10 letters to our name.<p>
-      <p>Here is the first: B</p>
-    </mat-card-content>
-  </mat-card>
+    <mat-card>
+      <mat-card-title>From envelope X &#x2705;</mat-card-title>
+      <mat-card-content>
+        <p>We call from the dust-from the aged bones of those you have killed.</p>
+        <p>Speak our name into his web and we will be free.</p>
+        <p>10 clues you must find - 10 letters to our name.<p>
+        <p>Here is the first: B</p>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card>
-    <mat-card-title>From scenario 76</mat-card-title>
-    <mat-card-content>
-      <p>We burrow deep, but the central clue cannot be found.</p>
-      <p>It is lost to us</p>
-      <p>The only thing left to do is ask the creator directly.<p>
-      <p>Send him "dust" and nothing else.</p>
-    </mat-card-content>
-  </mat-card>
+    <mat-card>
+      <mat-card-title>From scenario 76 &#x2705;</mat-card-title>
+      <mat-card-content>
+        <p>We burrow deep, but the central clue cannot be found.</p>
+        <p>It is lost to us</p>
+        <p>The only thing left to do is ask the creator directly.<p>
+        <p>Send him "dust" and nothing else.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>From the voice scenario (41/42) &#x2705;</mat-card-title>
+      <mat-card-content>
+        <p>The creator has made a request for our spoils.</p>
+        <p>The twelfth letter holds the key.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>From road event 46 </mat-card-title>
+      <mat-card-content>
+        <p>The ruins of the deep take shape.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="found-letters">
+  <h2>Found Letters</h2>
+  <div class="flex-container">
+    <span matTooltip="The first letter" class="found-letter">B</span>
+    <span matTooltip="From clue in scenario 15" class="found-letter">D</span>
+    <span matTooltip="From Isaac (scenario 76)" class="found-letter">S</span>
+    <span matTooltip="From ring of skulls" class="found-letter">A</span>
+    <span matTooltip="From Stone Golem" class="found-letter">L</span>
+    <span matTooltip="From map" class="found-letter">M</span>
+    <span matTooltip="From scenario 41" class="found-letter">A</span>
+    <span matTooltip="From road event 46" class="found-letter">W</span>
+<!--    <span matTooltip="From Sawbones" class="found-letter">E</span>-->
+  </div>
 </div>

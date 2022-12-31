@@ -3,13 +3,33 @@
   src: url('/assets/fonts/GloomhavenGlyph-Regular.otf');
 }
 
-.container {
+.input-container {
   display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 790px) {
+  .input-container {
+    flex-direction: row;
+  }
+  .keyboard {
+    max-width: 30em;
+  }
+}
+
+@media (max-width: 790px) {
+  .mat-card {
+    width: unset;
+  }
 }
 
 .keyboard {
+  flex-shrink: 0;
+}
+
+.letters, .numbers {
   display: flex;
-  max-width: 30em;
+  /*max-width: 30em;*/
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -34,12 +54,8 @@
 }
 
 .message textarea {
-  width: 350px;
-  height: 200px;
-}
-
-.found-messages {
-  display: flex;
+  /*width: 350px;*/
+  height: 3em;
 }
 
 mat-card {
@@ -53,4 +69,8 @@ mat-card {
 .found-letter {
   margin: 50px;
   font-size: 36px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
 }
