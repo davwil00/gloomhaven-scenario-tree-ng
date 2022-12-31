@@ -55,7 +55,7 @@ mat-toolbar .nav-row {
     border-left: 0;
     border-bottom: 1px solid #ccc;
   }
-/* } */ */
+
 .mat-badge-medium.mat-badge-after .mat-badge-content {
   top: -5px;
   right: -25px;
@@ -64,6 +64,4 @@ img.available-scenario {
   width: 250px;
   height: auto;
 }
-/* .main-tree { */
-  /* height: calc(100vh - 48px) */
-/* } */
+
