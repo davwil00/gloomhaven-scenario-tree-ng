@@ -34,3 +34,4 @@ jobs:
         localDir: './dist'
         remoteDir: '/var/www/gloomhaven-scenario-tree'
         port: 18022
+        dryRun: false
