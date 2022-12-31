@@ -11,8 +11,8 @@
 
     <div class="numbers">
       <div class="key" *ngFor="let number of numbers" (click)="addLetter(number)">
-        <span class="gloomhaven-font">{{number}}</span>
-        <span class="letter">{{number}}</span>
+        <span *ngIf="gloomhavenInput" class="gloomhaven-font">{{number}}</span>
+        <span *ngIf="!gloomhavenInput" class="letter">{{number}}</span>
       </div>
     </div>
   </div>
