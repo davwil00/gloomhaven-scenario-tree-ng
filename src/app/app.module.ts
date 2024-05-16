@@ -16,6 +16,7 @@ import { KeyComponent } from './key/key.component';
 import { MessagesComponent } from "./messages/messages.component";
 import { MatCardModule } from "@angular/material/card";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { FHMessagesComponent } from './messages/fh-messages.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     ExportTreeComponent,
     ImportExportDialogComponent,
     KeyComponent,
-    MessagesComponent
+    MessagesComponent,
+    FHMessagesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<mat-tab-group animationDuration="0ms">
+<mat-tab-group animationDuration="0ms" [selectedIndex]="4">
   <mat-tab label="Tree">
     <ng-template matTabContent>
       <div class="wrapper">
@@ -43,6 +43,6 @@
   </mat-tab>
   <mat-tab>
     <ng-template matTabLabel>Messages</ng-template>
-    <messages></messages>
+    <fh-messages></fh-messages>
   </mat-tab>
 </mat-tab-group>
