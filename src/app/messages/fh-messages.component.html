@@ -1,31 +1,42 @@
-<div class="container">
+<div class="input-container">
   <div class="keyboard">
-    <div class="key" *ngFor="let letter of letters" (click)="addLetter(letter)">
-      <span class="frosthaven-font">{{letter}}</span>
-      <span class="letter">{{letter}}</span>
+    <div class="letters">
+      <div class="key" *ngFor="let letter of letters" (click)="addLetter(letter)">
+        <span *ngIf="frosthavenInput" class="frosthaven-font">{{letter}}</span>
+        <span *ngIf="!frosthavenInput" class="letter">{{letter}}</span>
+      </div>
+      <div class="key"><span class="letter" (click)="addLetter(' ')">_</span></div>
+      <div class="key"><span class="letter" (click)="removeLetter()">&#x232b;</span></div>
     </div>
 
-    <div class="key" *ngFor="let number of numbers" (click)="addLetter(number)">
-      <span class="frosthaven-font">{{number}}</span>
-      <span class="letter">{{number}}</span>
+    <div class="numbers">
+      <div class="key" *ngFor="let number of numbers" (click)="addLetter(number)">
+        <span *ngIf="frosthavenInput" class="frosthaven-font">{{number}}</span>
+        <span *ngIf="!frosthavenInput" class="letter">{{number}}</span>
+      </div>
     </div>
   </div>
   <div class="message">
     <textarea readonly>{{message}}</textarea>
     <textarea readonly class="frosthaven-font">{{message}}</textarea>
-    <button type="button" (click)="clear()">Clear</button>
+    <div class="buttons">
+      <button type="button" (click)="clear()">Clear</button>
+      <button type="button" [class.frosthaven-font]="!frosthavenInput" (click)="toggleInputMethod()">ABC</button>
+    </div>
   </div>
 </div>
 
 <div class="found-messages">
-  <mat-card>
-    <mat-card-title>Puzzle page 4</mat-card-title>
-    <mat-card-content [class.hidden]="!isRevealed('4')">
-      there is power here deep beneath the surface, a source exists. we have built three research facilities so far,
-      but if my colleagues get their way, we will come away with zero.
-    </mat-card-content>
-    <mat-card-actions align="end" *ngIf="!isRevealed('4')">
-      <button mat-button (click)="reveal('4')">Reveal</button>
-    </mat-card-actions>
-  </mat-card>
+  <div class="flex-container">
+    <mat-card>
+      <mat-card-title>Puzzle page 4</mat-card-title>
+      <mat-card-content [class.hidden]="!isRevealed('4')">
+        there is power here deep beneath the surface, a source exists. we have built three research facilities so far,
+        but if my colleagues get their way, we will come away with zero.
+      </mat-card-content>
+      <mat-card-actions align="end" *ngIf="!isRevealed('4')">
+        <button mat-button (click)="reveal('4')">Reveal</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

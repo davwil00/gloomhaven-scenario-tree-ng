@@ -62,7 +62,8 @@
 
 .message textarea {
   /*width: 350px;*/
-  height: 3em;
+  height: 5em;
+  font-size: 2em;
 }
 
 mat-card {

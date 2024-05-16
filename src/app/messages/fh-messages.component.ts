@@ -8,14 +8,25 @@ import { Component } from "@angular/core";
 export class FHMessagesComponent {
 
   message = "";
+  frosthavenInput = true
   revealed: string[] = []
 
   addLetter(letter: string): void {
     this.message += (letter == '_' ? ' ' : letter);
   }
 
+  removeLetter(): void {
+    if (this.message.length > 0) {
+      this.message = this.message.substring(0, this.message.length - 1)
+    }
+  }
+
   clear(): void {
     this.message = '';
+  }
+
+  toggleInputMethod() {
+    this.frosthavenInput = !this.frosthavenInput
   }
   
   reveal(id: string) {
@@ -28,9 +39,7 @@ export class FHMessagesComponent {
   }
 
   get letters(): Array<string> {
-    const letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    letters.push('_');
-    return letters;
+    return 'abcdefghijklmnopqrstuvwxyz'.split('');
   }
 
   get numbers(): Array<string> {
