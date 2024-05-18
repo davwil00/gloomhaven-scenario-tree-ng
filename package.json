@@ -3,14 +3,10 @@
   "version": "0.2.4",
   "license": "GPL-3.0",
   "author": "David Mungin",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod --output-path dist --base-href gloomhaven-scenario-tree-ng",
-    "build-netlify": "ng build --prod --output-path netlify",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+	  "scripts": {
+	    "ng": "ng",
+	    "start": "ng serve",
+	    "build": "ng build --configuration production --output-path dist --base-href gloomhaven-scenario-tree-ng"
   },
   "private": true,
   "dependencies": {
