@@ -29,9 +29,9 @@ jobs:
       with:
         host: ${{ secrets.SSH_URL }}
         username: github
-        privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+        privateKey: ${{ secrets.PI4_GH_PRIVATE_KEY }}
         forceUpload: true
         localDir: './dist'
         remoteDir: '/var/www/gloomhaven-scenario-tree'
-        port: 18022
+        port: 22
         dryRun: false
