@@ -38,5 +38,15 @@
         <button mat-button (click)="reveal('4')">Reveal</button>
       </mat-card-actions>
     </mat-card>
+
+    <mat-card>
+      <mat-card-title>Puzzle page 5</mat-card-title>
+      <mat-card-content [class.hidden]="!isRevealed('5')">
+        They just are not able to see my vision. This could change everything, but some are quick to fear. We need to double the research.
+      </mat-card-content>
+      <mat-card-actions align="end" *ngIf="!isRevealed('5')">
+        <button mat-button (click)="reveal('5')">Reveal</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
